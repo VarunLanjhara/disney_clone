@@ -13,9 +13,6 @@ const Navbar = () => {
   const router = useRouter();
   const { data: session } = useSession();
   console.log(session);
-  const signIn = () => {
-    console.log("My Boi");
-  };
   return (
     <header className="sticky bg-[#040714] top-0 z-[1000] flex items-center px-10 sm:px-12 h-[72px]">
       <div>
@@ -77,7 +74,9 @@ const Navbar = () => {
       ) : (
         <button
           className="ml-auto uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-black transition duration-200"
-          onClick={signIn}
+          onClick={() => {
+            signIn();
+          }}
         >
           Login
         </button>
