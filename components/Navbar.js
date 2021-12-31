@@ -7,7 +7,7 @@ import {
   PlusIcon,
   StarIcon,
 } from "@heroicons/react/solid";
-import { signIn, signOut, useSession } from "next-auth/client";
+import { getSession, signIn, signOut, useSession } from "next-auth/client";
 
 const Navbar = () => {
   const router = useRouter();
