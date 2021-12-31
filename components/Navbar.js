@@ -12,16 +12,18 @@ const Navbar = () => {
   const router = useRouter();
   return (
     <header className="sticky bg-[#040714] top-0 z-[1000] flex items-center px-10 sm:px-12 h-[72px]">
-      <Image
-        src="/images/logo.svg"
-        alt=""
-        width={80}
-        height={80}
-        className="cursor-pointer top-[-12px]"
-        onClick={() => {
-          router.push("/");
-        }}
-      />
+      <div>
+        <Image
+          src="/images/logo.svg"
+          alt=""
+          width={90}
+          height={80}
+          className="cursor-pointer top-[-12px]"
+          onClick={() => {
+            router.push("/");
+          }}
+        />
+      </div>
       <div className="hidden ml-10 md:flex items-center space-x-6">
         <a className="flex items-center space-x-2 cursor-pointer text-white group">
           <HomeIcon className="h-4" />

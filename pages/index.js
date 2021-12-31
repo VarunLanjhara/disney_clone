@@ -6,7 +6,7 @@ export default function Home() {
     <div className="">
       <Head>
         <title>Disney Clone</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/shit.png" />
       </Head>
       <Navbar />
     </div>
