@@ -7,9 +7,15 @@ import {
   PlusIcon,
   StarIcon,
 } from "@heroicons/react/solid";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 const Navbar = () => {
   const router = useRouter();
+  const { data: session } = useSession();
+  console.log(session);
+  const signIn = () => {
+    console.log("My Boi");
+  };
   return (
     <header className="sticky bg-[#040714] top-0 z-[1000] flex items-center px-10 sm:px-12 h-[72px]">
       <div>
@@ -24,44 +30,58 @@ const Navbar = () => {
           }}
         />
       </div>
-      <div className="hidden ml-10 md:flex items-center space-x-6">
-        <a className="flex items-center space-x-2 cursor-pointer text-white group">
-          <HomeIcon className="h-4" />
-          <span className="relative uppercase text-sm font-medium before:bg-[#f9f9f9] before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-left before:scale-x-0 before:transition-all before:duration-200 group-hover:before:scale-x-100">
-            Home
-          </span>
-        </a>
-        <a className="flex items-center space-x-2 cursor-pointer text-white group">
-          <SearchIcon className="h-4" />
-          <span className="relative uppercase text-sm font-medium before:bg-[#f9f9f9] before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-left before:scale-x-0 before:transition-all before:duration-200 group-hover:before:scale-x-100">
-            Search
-          </span>
-        </a>
-        <a className="flex items-center space-x-2 cursor-pointer text-white group">
-          <PlusIcon className="h-4" />
-          <span className="relative uppercase text-sm font-medium before:bg-[#f9f9f9] before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-left before:scale-x-0 before:transition-all before:duration-200 group-hover:before:scale-x-100">
-            Watchlist
-          </span>
-        </a>
-        <a className="flex items-center space-x-2 cursor-pointer text-white group">
-          <StarIcon className="h-4" />
-          <span className="relative uppercase text-sm font-medium before:bg-[#f9f9f9] before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-left before:scale-x-0 before:transition-all before:duration-200 group-hover:before:scale-x-100">
-            Originals
-          </span>
-        </a>
-        <a className="flex items-center space-x-2 cursor-pointer text-white group">
-          <img src="/images/movie-icon.svg" alt="" className="h-5" />
-          <span className="relative uppercase text-sm font-medium before:bg-[#f9f9f9] before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-left before:scale-x-0 before:transition-all before:duration-200 group-hover:before:scale-x-100">
-            Movies
-          </span>
-        </a>
-        <a className="flex items-center space-x-2 cursor-pointer text-white group">
-          <img src="/images/series-icon.svg" alt="" className="h-5" />
-          <span className="relative uppercase text-sm font-medium before:bg-[#f9f9f9] before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-left before:scale-x-0 before:transition-all before:duration-200 group-hover:before:scale-x-100">
-            Series
-          </span>
-        </a>
-      </div>
+      {session ? (
+        <div className="hidden ml-10 md:flex items-center space-x-6">
+          <a className="flex items-center space-x-2 cursor-pointer text-white group">
+            <HomeIcon className="h-4" />
+            <span className="relative uppercase text-sm font-medium before:bg-[#f9f9f9] before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-left before:scale-x-0 before:transition-all before:duration-200 group-hover:before:scale-x-100">
+              Home
+            </span>
+          </a>
+          <a className="flex items-center space-x-2 cursor-pointer text-white group">
+            <SearchIcon className="h-4" />
+            <span className="relative uppercase text-sm font-medium before:bg-[#f9f9f9] before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-left before:scale-x-0 before:transition-all before:duration-200 group-hover:before:scale-x-100">
+              Search
+            </span>
+          </a>
+          <a className="flex items-center space-x-2 cursor-pointer text-white group">
+            <PlusIcon className="h-4" />
+            <span className="relative uppercase text-sm font-medium before:bg-[#f9f9f9] before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-left before:scale-x-0 before:transition-all before:duration-200 group-hover:before:scale-x-100">
+              Watchlist
+            </span>
+          </a>
+          <a className="flex items-center space-x-2 cursor-pointer text-white group">
+            <StarIcon className="h-4" />
+            <span className="relative uppercase text-sm font-medium before:bg-[#f9f9f9] before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-left before:scale-x-0 before:transition-all before:duration-200 group-hover:before:scale-x-100">
+              Originals
+            </span>
+          </a>
+          <a className="flex items-center space-x-2 cursor-pointer text-white group">
+            <img src="/images/movie-icon.svg" alt="" className="h-5" />
+            <span className="relative uppercase text-sm font-medium before:bg-[#f9f9f9] before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-left before:scale-x-0 before:transition-all before:duration-200 group-hover:before:scale-x-100">
+              Movies
+            </span>
+          </a>
+          <a className="flex items-center space-x-2 cursor-pointer text-white group">
+            <img src="/images/series-icon.svg" alt="" className="h-5" />
+            <span className="relative uppercase text-sm font-medium before:bg-[#f9f9f9] before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-left before:scale-x-0 before:transition-all before:duration-200 group-hover:before:scale-x-100">
+              Series
+            </span>
+          </a>
+        </div>
+      ) : (
+        ""
+      )}
+      {session ? (
+        ""
+      ) : (
+        <button
+          className="ml-auto uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-black transition duration-200"
+          onClick={signIn}
+        >
+          Login
+        </button>
+      )}
     </header>
   );
 };
