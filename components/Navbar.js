@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import { useRouter } from "next/router";
 import {
   HomeIcon,
@@ -69,13 +69,15 @@ const Navbar = () => {
         ""
       )}
       {session ? (
-        <img
-          src={session.user.image}
-          className="ml-auto h-12 w-12 rounded-full object-cover cursor-pointer"
-          onClick={() => {
-            signOut();
-          }}
-        />
+        <>
+          <img
+            src={session.user.image}
+            className="ml-auto h-12 w-12 rounded-full object-cover cursor-pointer"
+            onClick={() => {
+              signOut();
+            }}
+          />
+        </>
       ) : (
         <button
           className="ml-auto uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-black transition duration-200"
