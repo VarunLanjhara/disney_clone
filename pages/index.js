@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import { getSession, useSession } from "next-auth/client";
 import Hero from "../components/Hero";
+import Slider from "../components/Slider";
 
 export default function Home() {
   const [session] = useSession();
@@ -12,7 +13,13 @@ export default function Home() {
         <link rel="icon" href="/shit.png" />
       </Head>
       <Navbar />
-      {!session ? <Hero /> : <main>App</main>}
+      {!session ? (
+        <Hero />
+      ) : (
+        <main className="">
+          <Slider />
+        </main>
+      )}
     </div>
   );
 }

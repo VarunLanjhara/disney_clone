@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
+import { getSession, signIn, signOut, useSession } from "next-auth/client";
 
 const Hero = () => {
   return (
@@ -24,13 +25,13 @@ const Hero = () => {
             height="150"
             objectFit="contain"
           />
-          <button className="bg-blue-600 uppercase text-xl tracking-wide font-extrabold py-4 px-6 w-full rounded hover:bg-[#0485ee]">
+          <button className="bg-blue-600 uppercase text-xl tracking-wide font-extrabold py-4 px-6 w-full rounded hover:bg-[#0485ee]" onClick={() => {
+            signIn()
+          }}>
             Get all there
           </button>
           <p className="text-xs text-center">
-            Get Premier Access to Raya and the Last Dragon for an additional fee
-            with a Disney+ subscription. As of 03/26/21, the price of Disney+
-            and The Disney Bundle will increase by $
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
           </p>
           <Image
             src="/images/cta-logo-two.png"
