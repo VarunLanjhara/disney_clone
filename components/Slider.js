@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 const Slider = () => {
-    return (
-        <section className="relative mt-7 shadow-2xl max-w-screen-2xl mx-auto">
+  return (
+    <section className="relative mt-7 shadow-2xl max-w-screen-2xl mx-auto">
       <div />
       <Carousel
         autoPlay
@@ -12,7 +12,8 @@ const Slider = () => {
         showStatus={false}
         showIndicators={true}
         showThumbs={false}
-        interval={5000}
+        interval={2000}
+        swipeable={true}
       >
         <div>
           <img loading="lazy" src="/images/slider-1.jpg" alt="" />
@@ -28,7 +29,7 @@ const Slider = () => {
         </div>
       </Carousel>
     </section>
-    )
-}
+  );
+};
 
-export default Slider
+export default Slider;

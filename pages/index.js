@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import { getSession, useSession } from "next-auth/client";
 import Hero from "../components/Hero";
 import Slider from "../components/Slider";
+import Logo from "../components/Logo";
 
 export default function Home() {
   const [session] = useSession();
@@ -18,6 +19,7 @@ export default function Home() {
       ) : (
         <main className="">
           <Slider />
+          <Logo />
         </main>
       )}
     </div>
