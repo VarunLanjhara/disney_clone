@@ -4,6 +4,8 @@ import { getSession, useSession } from "next-auth/client";
 import Hero from "../components/Hero";
 import Slider from "../components/Slider";
 import Logo from "../components/Logo";
+import MoviesStuff from "../components/MoviesStuff"
+import ShowsStuff from "../components/ShowsStuff";
 
 export default function Home({
   popularMovies,
@@ -26,6 +28,10 @@ export default function Home({
         <main className="relative min-h-screen after:bg-home after:bg-center after:bg-cover after:bg-no-repeat after:bg-fixed after:absolute after:inset-0 after:z-[-1]">
           <Slider />
           <Logo />
+          <MoviesStuff results={popularMovies} title="Popular Movies" />
+          <ShowsStuff results={popularShows} title="Popular Shows" />
+          <MoviesStuff results={top_ratedMovies} title="Top Rated Movies" />
+          <ShowsStuff results={top_ratedShows} title="Top Rated Shows" />
         </main>
       )}
     </div>
