@@ -13,7 +13,7 @@ const Navbar = () => {
   const router = useRouter();
   const [session] = useSession();
   return (
-    <header className="sticky bg-[#040714] top-0 z-[1000] flex items-center px-10 sm:px-12 h-[72px]">
+    <header className="sticky bg-[#040714] top-0 z-[1000] flex items-center px-10 sm:px-12 h-[72px] mb-[-20px]">
       <div>
         <Image
           src="/images/logo.svg"
