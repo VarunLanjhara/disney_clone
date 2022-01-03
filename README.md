@@ -1,14 +1,14 @@
 # [Disney Clone](https://disney-clone-boi.vercel.app/)
 
 ## Introduction
-Disney clone made by an idiot(me :)) with next js,next-auth,tailwind and firebase :)
+Disney clone made by an idiot(me :)) with next js,next-auth,tailwind,firebase and tmdb api
 
 ## Technologies Used
 - Next js
 - Next-auth
 - Tailwind
 - Firebase
-- tmdb api
+- Tmdb api
 
 ## Features
 ```
