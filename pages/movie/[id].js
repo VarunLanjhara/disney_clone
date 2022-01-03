@@ -9,7 +9,6 @@ import { PlusIcon, XIcon } from "@heroicons/react/solid";
 import ReactPlayer from "react-player"
 
 const Movie = ({ result }) => {
-  console.log(result);
   const router = useRouter();
   const [session] = useSession();
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
@@ -32,7 +31,7 @@ const Movie = ({ result }) => {
       {!session ? (
         <Hero />
       ) : (
-        <section className="relative z-50">
+        <section className="relative z-50 overflow-hidden">
           <div className="relative min-h-[calc(100vh-8vh)]">
             <Image
               src={
@@ -107,7 +106,7 @@ const Movie = ({ result }) => {
               <ReactPlayer
                 url={`https://www.youtube.com/watch?v=${result.videos?.results[index]?.key}`}
                 width="100%"
-                height="100%"
+                height="80%"
                 style={{ position: "absolute", top: "0", left: "0" }}
                 controls={true}
                 playing={showPlayer}
