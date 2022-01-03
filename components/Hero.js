@@ -10,7 +10,7 @@ const Hero = () => {
         <title>Log in | Disney Clone</title>
         <link rel="icon" href="/shit.jpg" />
       </Head>
-      <div className="relative min-h-[calc(100vh-72px)]">
+      <div className="relative min-h-[calc(100vh-8.5vh)]">
         <Image
           src="/images/hero-background.jpg"
           layout="fill"
@@ -25,13 +25,19 @@ const Hero = () => {
             height="150"
             objectFit="contain"
           />
-          <button className="bg-blue-600 uppercase text-xl tracking-wide font-extrabold py-4 px-6 w-full rounded hover:bg-[#0485ee]" onClick={() => {
-            signIn()
-          }}>
+          <button
+            className="bg-blue-600 uppercase text-xl tracking-wide font-extrabold py-4 px-6 w-full rounded hover:bg-[#0485ee]"
+            onClick={() => {
+              signIn();
+            }}
+          >
             Get all there
           </button>
           <p className="text-xs text-center">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen
           </p>
           <Image
             src="/images/cta-logo-two.png"

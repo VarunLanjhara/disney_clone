@@ -1,5 +1,5 @@
 import { getSession, useSession } from "next-auth/client";
-import React,{useEffect} from "react";
+import React,{useEffect,useState} from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
@@ -31,7 +31,7 @@ const Show = ({ result }) => {
       {!session ? (
         <Hero />
       ) : (
-        <section className="relative z-50">
+        <section className="relative z-50 overflow-hidden">
           <div className="relative min-h-[calc(100vh-8vh)]">
             <Image
               src={
