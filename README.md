@@ -1,9 +1,11 @@
 # [Disney Clone](https://disney-clone-boi.vercel.app/)
 
 ## Introduction
+
 Disney clone made by an idiot(me :)) with next js,next-auth,tailwind,firebase and tmdb api
 
 ## Technologies Used
+
 - Next js
 - Next-auth
 - Tailwind
@@ -11,6 +13,7 @@ Disney clone made by an idiot(me :)) with next js,next-auth,tailwind,firebase an
 - Tmdb api
 
 ## Features
+
 ```
 - Clean ui just like disney :)
 - Google auth
@@ -20,6 +23,3 @@ Disney clone made by an idiot(me :)) with next js,next-auth,tailwind,firebase an
 - View trailer functionality
 - and much more go check website now gamers :)
 ```
-
-## Screenshots
-no screenshots go check website :huh:
