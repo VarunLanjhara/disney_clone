@@ -22,4 +22,4 @@ Disney clone made by an idiot(me :)) with next js,next-auth,tailwind,firebase an
 ```
 
 ## Screenshots
-no screenshots go check website :huh:
+no screenshots go check website
